@@ -20,7 +20,7 @@ public class MyProjectHolder {
 
     private static VirtualFile getProjectVirtualFile(Project project) {
         try {
-            return VfsUtil.findFileByURL(new URL("file:\\" + project.getBasePath()));
+            return VfsUtil.findFileByURL(new URL("file://" + project.getBasePath()));
         } catch (MalformedURLException e) {
             return null;
         }
